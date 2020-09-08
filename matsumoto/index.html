@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="hello">こんにちは</button>
+        <button @click="morning">おはよう</button>
+        <button @click="bye">さようなら</button>
+        <button @click="clear">履歴削除</button>
+        <ul>
+            <li v-for="(chat, index) in chat_history">
+                {{ chat }}
+                <button @click="delete_item(index)">DELETE</button>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
