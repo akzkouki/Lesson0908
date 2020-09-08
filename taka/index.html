@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Vue.js</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <h1>挨拶</h1>
+            <button @click="hello">こんにちは</button>
+            <button @click="morning">おはよう</button>
+            <button @click="goodbye">さようなら</button>
+            <button @click="alldelete" class="alldelete">全削除</button>
+            <ul>
+                <li v-for="message, index in messages">
+                    {{ message }}
+                    <a @click="del(index)" href="#">×</a>
+                </li>
+            </ul>
+        </div>
+        <script src="script.js"></script>
+    </body>
+
+</html>
