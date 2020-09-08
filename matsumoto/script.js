@@ -1,7 +1,6 @@
 const vm = new Vue({
     el: '#app',
     data:{
-        value: 0,
         chat_history: [],
     },
 
@@ -17,7 +16,6 @@ const vm = new Vue({
         },
         clear(){
             this.chat_history = [];
-            // this.chat_history.splice(0, this.chat_history.length);
         },
         delete_item(index){
             this.chat_history.splice(index,1);
