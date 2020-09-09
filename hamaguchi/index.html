@@ -9,14 +9,13 @@
 </head>
 <body>
 <div id="app">
+    <p>
         <input v-model="message" placeholder="">
-        <button @click="kon">送信</button>
-           
-        <ul>
-                <li v-for="historyItem in history">
-                    {{ historyItem }}
-                </li>
-        </ul>
+        + 
+        <input v-model="message2" placeholder="">
+         = {{resultNum}}
+    </p>
+        
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 <script src="./script.js"></script>
