@@ -8,15 +8,15 @@
 </head>
 <body>
     <div id="app">
-        <h1>簡易ツイッター</h1>
+        <h1>リアクティブな計算機</h1>
         <h1></h1>
-        <input v-model="message" placeholder="">
-        <button @click="output">送信</button>
-        <ul>
-            <li v-for="historyItem in history">
-                {{ historyItem }}
-            </li>
-        </ul>
+        <input v-model.number="first" placeholder="">
+        ∔
+        <input v-model.number="second" placeholder="">
+        =
+        {{sum}}
+        <p v-if= "rem == 0" >偶数</p>
+        <p v-else>奇数</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./script.js"></script>

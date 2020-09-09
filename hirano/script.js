@@ -1,12 +1,15 @@
 const vm = new Vue({
     el: '#app',
     data: {
-        message: '',
-        history: [],
+        first: 0,
+        second: 0,
     },
-    methods: {
-        output(){
-            this.history.push(this.message);
+    computed: {
+        sum: function (){
+            return this.first + this.second;
         },
-    },
+        rem: function (){
+            return this.sum % 2;
+        },
+    }
 });
