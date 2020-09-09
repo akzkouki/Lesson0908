@@ -1,14 +1,21 @@
 const vm = new Vue({
     el: "#app",
     data: {
-        message: "",
-        history: [],
+        message: 0,
+        message2: 0,
+        
     },
 
-    methods: {
-        kon() {
-            this.history.push(this.message);
-        },
+    computed: {
+        // 算出 getter 関数
+       resultNum: function () {
+          // `this` は vm インスタンスを指します
+          return parseInt(this.message) + parseInt(this.message2)
         
+        },
+        rem: function () {
+            // `this` は vm インスタンスを指します
+            return parseInt(this.resultNum) % 2
+      },
     },
 });
