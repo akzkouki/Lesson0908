@@ -4,18 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div id="app">
-        <h1>あいさつ独りチャット</h1>
+        <h1>簡易ツイッター</h1>
         <h1></h1>
-        <p>{{ value }}</p>
-        <button @click="o">おはよう</button>
-        <button @click="k">こんにちは</button>
-        <button @click="s">さようなら</button>
-        <h1></h1>
-        <button @click="Del">削除</button>
-        <button @click="AllDel">全削除</button>
+        <input v-model="message" placeholder="">
+        <button @click="output">送信</button>
         <ul>
             <li v-for="historyItem in history">
                 {{ historyItem }}
