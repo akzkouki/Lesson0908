@@ -3,19 +3,19 @@ const vm = new Vue({
     data:{
         num1:0,
         num2:0,
-        chat_history: [],
-        good:false,
-        retweet:false,
-    },
-
-    methods: {
-        
+        ans:0,
     },
 
     computed:{
-        calculation:function(){
-
-            return Number(this.num1) + Number(this.num2); 
+        odd_even:function(){
+            this.ans = Number(this.num1) + Number(this.num2);
+            let odd_even_check = '';
+            if(this.ans % 2 == 0){
+                odd_even_check = '偶数';
+            }else{
+                odd_even_check = '奇数';
+            }
+            return odd_even_check; 
         }
     }
 })
