@@ -12,6 +12,15 @@
         <ul>
            
                 {{ sum }}
+                
+                    <div v-if="sum % 2 == 0">
+                        偶数
+                    </div>
+        
+                    <div v-else>
+                    奇数
+                    </div>
+                
            
         </ul>
         
