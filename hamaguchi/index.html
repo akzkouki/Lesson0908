@@ -9,11 +9,9 @@
 </head>
 <body>
 <div id="app">
-        <p>{{ value }}</p>
-        <button @click="kon">こんにちは</button>
-        <button @click="oha">おはよう</button>
-        <button @click="sayo">さようなら</button>
-        <button @click="alldel">すべて削除</button>    
+        <input v-model="message" placeholder="">
+        <button @click="kon">送信</button>
+           
         <ul>
                 <li v-for="historyItem in history">
                     {{ historyItem }}

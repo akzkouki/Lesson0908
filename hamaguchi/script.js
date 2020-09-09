@@ -1,22 +1,14 @@
 const vm = new Vue({
     el: "#app",
     data: {
-        value: 0,
+        message: "",
         history: [],
     },
 
     methods: {
         kon() {
-            this.history.push('こんにちは');
+            this.history.push(this.message);
         },
-        oha() {
-            this.history.push('おはよう');
-        },
-        sayo() {
-            this.history.push('さようなら');
-        },
-        alldel() {
-            this.history = [];
-        },
+        
     },
 });
