@@ -8,14 +8,16 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="VueTxt" placeholder="文字を入力">
-        <button @click="tweet">投稿</button>
+        <p>
+            <input type="text" v-model="first" placeholder="数字">
+            +
+            <input type="text" v-model="second" placeholder="数字">
+            =
+            {{Adder}}
+        </p>
+        
 
-        <ul>
-            <li v-for="historyItem in history">
-                {{historyItem}}
-            </li>
-        </ul>
+        
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
