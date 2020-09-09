@@ -7,14 +7,16 @@
 </head>
 <body>
     <div id="app">
-        <button @click="hello">こんにちは</button>
+        <input type="text" v-model="textInput">
+        <button @click="sending">送信</button>
+        <!-- <button @click="hello">こんにちは</button>
         <button @click="morning">おはよう</button>
         <button @click="bye">さようなら</button>
-        <button @click="clear">履歴削除</button>
+        <button @click="clear">履歴削除</button> -->
         <ul>
             <li v-for="(chat, index) in chat_history">
                 {{ chat }}
-                <button @click="delete_item(index)">DELETE</button>
+                <!-- <button @click="delete_item(index)">DELETE</button> -->
             </li>
         </ul>
     </div>
