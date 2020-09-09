@@ -7,13 +7,12 @@
 </head>
 <body>
     <div id="app">
-        <textarea v-model="message" placeholder="add multiple lines"></textarea>
-         <button @click="add">追加</button>
-         
+        <input v-model="inp1" placeholder="edit me">
+        <input v-model="inp2" placeholder="edit me">
         <ul>
-            <li v-for="historyItem in history">
-                {{ historyItem }}
-            </li>
+           
+                {{ sum }}
+           
         </ul>
         
     </div>
