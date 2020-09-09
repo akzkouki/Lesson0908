@@ -7,10 +7,8 @@
 </head>
 <body>
     <div id="app">
-         <button @click="kon">こんにちは</button>
-         <button @click="oha">おはよう</button>
-         <button @click="konban">こんばんは</button>
-         <button @click="saku">削除</button>
+        <textarea v-model="message" placeholder="add multiple lines"></textarea>
+         <button @click="add">追加</button>
          
         <ul>
             <li v-for="historyItem in history">
