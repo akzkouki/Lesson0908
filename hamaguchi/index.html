@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+<div id="app">
+        <p>{{ value }}</p>
+        <button @click="kon">こんにちは</button>
+        <button @click="oha">おはよう</button>
+        <button @click="sayo">さようなら</button>
+        <button @click="alldel">すべて削除</button>    
+        <ul>
+                <li v-for="historyItem in history">
+                    {{ historyItem }}
+                </li>
+        </ul>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script src="./script.js"></script>
+</body>
+</html>

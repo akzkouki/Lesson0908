@@ -1,33 +1,21 @@
 const vm = new Vue({
     el: '#app',
     data:{
-        textInput:'',
+        num1:0,
+        num2:0,
         chat_history: [],
+        good:false,
+        retweet:false,
     },
 
     methods: {
-        // hello(){
-        //     this.chat_history.push('こんにちは');
-        // },
-        // morning(){
-        //     this.chat_history.push('おはよう');
-        // },
-        // bye(){
-        //     this.chat_history.push('さようなら');
-        // },
-        // clear(){
-        //     this.chat_history = [];
-        // },
-        // delete_item(index){
-        //     this.chat_history.splice(index,1);
-        // },
-        sending() {
-            this.chat_history.push(this.textInput);
-            this.textInput = '';
-        }
+        
     },
 
-    computed: {
+    computed:{
+        calculation:function(){
 
+            return Number(this.num1) + Number(this.num2); 
+        }
     }
 })

@@ -3,22 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="textInput">
-        <button @click="sending">送信</button>
-        <!-- <button @click="hello">こんにちは</button>
-        <button @click="morning">おはよう</button>
-        <button @click="bye">さようなら</button>
-        <button @click="clear">履歴削除</button> -->
-        <ul>
-            <li v-for="(chat, index) in chat_history">
-                {{ chat }}
-                <!-- <button @click="delete_item(index)">DELETE</button> -->
-            </li>
-        </ul>
+        <input type="number" v-model="num1">
+        +
+        <input type="number" v-model="num2">
+        = {{calculation}}
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
