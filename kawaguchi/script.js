@@ -3,25 +3,12 @@ const vm = new Vue({
 
     data:{
         history: [],
+        VueTxt: '',
     },
 
     methods:{
-        kon(){
-            this.history.push("こんにちは");
-        },
-        oha(){
-            this.history.push("おはよう");
-        },
-        sayo(){
-            this.history.push("さようなら");
-        },
-        destroy(){
-            this.history = [];
-        },
-        del(){
-            if(this.history.length !== 0){
-                this.history.pop();
-            }
+        tweet(){
+            this.history.push(this.VueTxt);
         },
     },
 
