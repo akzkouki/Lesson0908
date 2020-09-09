@@ -15,7 +15,8 @@
         <input v-model="message2" placeholder="">
          = {{resultNum}}
     </p>
-        
+    <p v-if = "rem === 0">偶数</p>
+    <p v-if = "rem === 1">奇数</p>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 <script src="./script.js"></script>

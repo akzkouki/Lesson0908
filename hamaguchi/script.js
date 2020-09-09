@@ -11,6 +11,11 @@ const vm = new Vue({
        resultNum: function () {
           // `this` は vm インスタンスを指します
           return parseInt(this.message) + parseInt(this.message2)
-        }
-      }
+        
+        },
+        rem: function () {
+            // `this` は vm インスタンスを指します
+            return parseInt(this.resultNum) % 2
+      },
+    },
 });
